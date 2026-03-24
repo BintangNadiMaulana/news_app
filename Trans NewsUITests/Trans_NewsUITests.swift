@@ -24,18 +24,20 @@ final class Trans_NewsUITests: XCTestCase {
 
     @MainActor
     func testExample() throws {
-        // UI tests must launch the application that they test.
         let app = XCUIApplication()
+        app.launchArguments.append("UITEST_SKIP_ONBOARDING")
         app.launch()
 
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertTrue(app.buttons["Kategori"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.buttons["Profil"].exists)
     }
 
     @MainActor
     func testLaunchPerformance() throws {
-        // This measures how long it takes to launch your application.
         measure(metrics: [XCTApplicationLaunchMetric()]) {
-            XCUIApplication().launch()
+            let app = XCUIApplication()
+            app.launchArguments.append("UITEST_SKIP_ONBOARDING")
+            app.launch()
         }
     }
 }

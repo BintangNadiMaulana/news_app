@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A1B2C3D42F700AC900A69149 /* (null) in Embed App Extensions */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		26F4BA282F700AC900A69149 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -22,6 +26,20 @@
 			remoteInfo = "Trans News";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A1B2C3D12F700AC900A69149 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A1B2C3D42F700AC900A69149 /* (null) in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		26F4BA182F700AC700A69149 /* Trans News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trans News.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +61,11 @@
 		26F4BA342F700AC900A69149 /* Trans NewsUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "Trans NewsUITests";
+			sourceTree = "<group>";
+		};
+		A1B2C3C52F700AC900A69149 /* Trans News Widget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Trans News Widget";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +92,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A1B2C3C92F700AC900A69149 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +108,7 @@
 				26F4BA1A2F700AC700A69149 /* Trans News */,
 				26F4BA2A2F700AC900A69149 /* Trans NewsTests */,
 				26F4BA342F700AC900A69149 /* Trans NewsUITests */,
+				A1B2C3C52F700AC900A69149 /* Trans News Widget */,
 				26F4BA192F700AC700A69149 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +133,7 @@
 				26F4BA142F700AC700A69149 /* Sources */,
 				26F4BA152F700AC700A69149 /* Frameworks */,
 				26F4BA162F700AC700A69149 /* Resources */,
+				A1B2C3D12F700AC900A69149 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -163,6 +195,25 @@
 			productReference = 26F4BA312F700AC900A69149 /* Trans NewsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		A1B2C3BF2F700AC900A69149 /* Trans News Widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2694BCF92F72E635001B53FC /* Build configuration list for PBXNativeTarget "Trans News Widget" */;
+			buildPhases = (
+				A1B2C3C92F700AC900A69149 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A1B2C3C52F700AC900A69149 /* Trans News Widget */,
+			);
+			name = "Trans News Widget";
+			packageProductDependencies = (
+			);
+			productName = "Trans News Widget";
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -203,6 +254,7 @@
 				26F4BA172F700AC700A69149 /* Trans News */,
 				26F4BA262F700AC900A69149 /* Trans NewsTests */,
 				26F4BA302F700AC900A69149 /* Trans NewsUITests */,
+				A1B2C3BF2F700AC900A69149 /* Trans News Widget */,
 			);
 		};
 /* End PBXProject section */
@@ -269,6 +321,27 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		2694BCF52F72E358001B53FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Trans News Widget/Trans News Widget.entitlements";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = "Trans News Widget";
+			};
+			name = Debug;
+		};
+		2694BCF62F72E358001B53FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Trans News Widget/Trans News Widget.entitlements";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				PRODUCT_NAME = "Trans News Widget";
+			};
+			name = Release;
+		};
 		26F4BA392F700AC900A69149 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -395,11 +468,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Trans News/Trans News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AM8GV272Y9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleURLTypes = "{\n    CFBundleTypeRole = Editor;\n    CFBundleURLName = \"NEWS.Trans-News\";\n    CFBundleURLSchemes =     (\n        transnews\n    );\n}";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -427,11 +502,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Trans News/Trans News.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = AM8GV272Y9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleURLTypes = "{\n    CFBundleTypeRole = Editor;\n    CFBundleURLName = \"NEWS.Trans-News\";\n    CFBundleURLSchemes =     (\n        transnews\n    );\n}";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -541,6 +618,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2694BCF92F72E635001B53FC /* Build configuration list for PBXNativeTarget "Trans News Widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2694BCF52F72E358001B53FC /* Debug */,
+				2694BCF62F72E358001B53FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		26F4BA132F700AC700A69149 /* Build configuration list for PBXProject "Trans News" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
